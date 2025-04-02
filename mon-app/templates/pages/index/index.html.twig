@@ -1,0 +1,13 @@
+{# home page #}
+{% extends 'base.html.twig' %}
+
+{% block body %}
+	<div class="red">
+	{% if nom is not null %}
+		<p>Welcome <b>{{ nom }}</b> to the home page!</p>
+		<a href="{{ path('app_hello_get', {
+			name: nom,
+		}) }}"> hello</a>
+	{% endif %}
+	</div>
+{% endblock body %}

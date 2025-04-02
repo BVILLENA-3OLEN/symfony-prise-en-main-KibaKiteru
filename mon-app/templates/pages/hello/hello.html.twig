@@ -1,0 +1,8 @@
+{# hello page#}
+{% extends 'base.html.twig' %}
+
+{% block body %}
+	<p>Hello {{ name }}!</p>
+	<p> {{data}} </p>
+	<a href="{{ path('app_index_get') }}">Accuil</a>
+{% endblock %}

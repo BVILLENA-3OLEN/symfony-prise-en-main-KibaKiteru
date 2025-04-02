@@ -1,3 +1,17 @@
+:root {
+	/*variable*/
+	--radius-angle: 80%;
+
+}
+
+[data-theme="dark"]{
+	--color-main-background: #3a3a3a;
+}
+
+[data-theme="light"]{
+	--color-main-background: #f9f9f9;
+}
+
 body {
-    background-color: skyblue;
+    background-color: var(--color-main-background);
 }
