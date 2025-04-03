@@ -1,2 +1,3 @@
 app.index.title: "Home"
 
+app.hello.name: "Hello %name%"

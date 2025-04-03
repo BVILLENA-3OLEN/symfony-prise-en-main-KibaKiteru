@@ -19,7 +19,8 @@ class HelloNameGetController extends AbstractController
 {
 	public function __invoke(
 		TranslatorInterface $translator,
-		string $name): Response
+		string $name
+		): Response
 	{
 		return $this->render(
 			view: 'pages/hello/hello.html.twig',

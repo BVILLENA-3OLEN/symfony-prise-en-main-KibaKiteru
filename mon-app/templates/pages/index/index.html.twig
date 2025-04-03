@@ -1,13 +1,20 @@
 {# home page #}
-{% extends 'base.html.twig' %}
+{% extends 'nav.html.twig' %}
 
 {% block body %}
 	<div class="red">
-	{% if nom is not null %}
-		<p>Welcome <b>{{ nom }}</b> to the home page!</p>
-		<a href="{{ path('app_hello_get', {
-			name: nom,
-		}) }}"> hello</a>
-	{% endif %}
+		{% if nom is not null %}
+			<p>Welcome <b>{{ nom }}</b> to the home page!</p>
+			<a href="{{ path('app_hello_get', {
+				name: nom,
+			}) }}"> hello</a>
+		{% endif %}
+		<ul>
+			{% for published_post in published_posts %}
+				<li>
+				{{published_post.publishedAt | date('Y-m-d à H:i')}} {{ published_post.title }}
+				</li>
+			{% endfor %}
+		</ul>
 	</div>
 {% endblock body %}
